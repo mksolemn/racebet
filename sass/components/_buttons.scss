@@ -1,0 +1,11 @@
+.btn {
+  transition:all ease-in-out .3s;
+  &:hover {
+    cursor:pointer;
+  }
+  &.main {
+    @include gradient-button();
+    font-size: 1.2em;
+
+  }
+}

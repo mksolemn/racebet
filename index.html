@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Racebet</title>
+        <link rel="stylesheet" href="css/main.css">
+
+    </head>
+    <body>
+        <div class="filters">
+            <ul class="inline-list">
+                <li>
+                    <label class="G">Gallop
+                        <input type="checkbox" checked>
+                    </label>
+                </li>
+                <li>
+                    <label class="J">Jumping
+                        <input type="checkbox" checked>
+                    </label>
+                </li>
+                <li>
+                    <label class="T">Trot
+                        <input type="checkbox" checked>
+                    </label>
+                </li>
+                <li>
+                    <label class="D">Dogs
+                        <input type="checkbox">
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <script id="odds" type="text/x-handlebars-template">​
+          {{#each this}}
+          <div class="widget-container" id="{{id_race}}" data-race-type="{{race_type}}" >
+          <div class="header">
+            <div class="left">
+              <span class="flag">
+                <img src="img/flags/{{event.country}}.png" alt="{{event.country}}_flag">
+              </span>
+              <span>{{event.title}}</span>
+            </div>
+            <div class="right"><span class="timestamp">{{#convertTime}}{{post_time}}{{/convertTime}}</span> min</div>
+          </div>
+          <div class="info">
+            <ul class="inline-list">
+              <li>{{num_runners}}</li>
+              <li>{{distance}} m</li>
+              <li><span class="amount">{{purse.amount}}</span> {{purse.currency}}</li>
+              <li>
+                <img class="icon" src="img/race-types/race-type-{{race_type}}.svg" alt="race-type-{{race_type}}">
+              </li>
+            </ul>
+          </div>
+            <div class="body">
+            <ul class="odds">
+            {{#each runners}}
+                <li id="{{id_runner}}">
+                        <span class="jacket">
+                            <img src="img/silks/{{silk}}">
+                        </span>
+                        <span class="name">{{name}}</span>
+                        <span>
+                            <button class="btn main" value="{{odds}}">{{odds}}</button>
+                        </span>
+                </li>
+        
+            {{/each}}
+            </ul>
+            </div>
+        </div>
+        {{/each}}
+        ​</script>
+
+        <div class="handlebars-placeholder"></div>
+
+        <script src="js/vendors/jquery-3.1.0.min.js"></script>
+        <script src="js/vendors/handlebars-v4.0.5.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

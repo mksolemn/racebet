@@ -1,0 +1,7 @@
+@mixin gradient-button($top-color: $support-btn-color, $bot-color:$main-btn-color, $border-top: $border-top-color, $outline: $btn-outline) {
+  background: linear-gradient(to bottom, $top-color 0%,$bot-color 100%);
+  box-shadow: 0px 0px 0px 1px $outline, inset 0px 1px 0px 0px $border-top;
+  border-radius: 2px;
+  padding: 5px 10px;
+
+}

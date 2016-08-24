@@ -1,0 +1,93 @@
+.widget-container {
+  background: $main-background;
+  border-radius:3px;
+  color:$text-main;
+  max-width:240px;
+  margin:auto;
+  padding:4px;
+  .header {
+    display:inline-block;
+    box-sizing:border-box;
+    width:100%;
+  }
+  .header, .info {
+    padding:12px 5px;
+    color: $text-light;
+    font-size:.9em;
+    .left {
+      float:left;
+      font-weight:bold;
+    }
+    .right {
+      float:right;
+    }
+  }
+  .info {
+    padding: 0 5px;
+    ul {
+      border-top: solid 1px $border-dark;
+      padding: 12px 0px;
+      display:flex;
+      li {
+        font-size:.8em;
+        align-self: center;
+        line-height:16px;
+        padding:0 5px;
+        box-sizing:border-box;
+        border-right: 1px solid $border-dark;
+        &:last-child {
+          border:none;
+          text-align:right;
+          flex:2;
+        }
+        &:nth-child(3) {
+          border:none;
+        }
+      }
+  }
+  }
+  .body {
+    background:$light-background;
+    display:inline-block;
+    width:100%;
+    font-size:.9em;
+    .jacket {
+      display:inline-block;
+    }
+    .odds {
+      li {
+        padding:12px 10px;
+        border-top: solid 1px $border-light;
+        display:flex;
+        flex-direction:row;
+        span {
+          align-self:center;
+          &:nth-child(2) {
+            padding-left:5px;
+          }
+          &:last-child {
+            flex:2;
+            text-align:right;
+          }
+        }
+        &:first-child {
+          border:none;
+        }
+      }
+    }
+  }
+}
+.icon {
+  display:inline-block;
+  width:30px;
+  height:18px;
+}
+
+.filters {
+  display:flex;
+  width:100%;
+  background:$main-background;
+  color:$text-light;
+  margin-bottom:45px;
+  justify-content:center;
+}
